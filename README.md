@@ -1,13 +1,17 @@
 # MutinyChat
 
+> [!IMPORTANT]
+> **Project status: Maintenance / Reference**
+>
+> This repository contains the original working MutinyChat prototype and is retained as a reference implementation for its Tor networking, encrypted session, invitation, and participant-verification behavior. Active feature development has moved to the next-generation MutinyChat architecture. Changes here should be limited to critical bug/security fixes or corrections needed to preserve the reference implementation.
+
 MutinyChat is a retro-styled desktop chat app inspired by AOL and MSN, built with Tauri, Svelte, Python, and Tor.
 
-It supports direct room sharing over Tor onion services with ephemeral chat behavior and encrypted message transport. This remains an actively developed MVP/prototype, not a professionally audited or production-grade secure messenger.
+It supports direct room sharing over Tor onion services with ephemeral chat behavior and encrypted message transport.
 
-## Current project status
+## Project Scope & Status
 
-Implemented:
-
+This repository is a desktop MVP/prototype reference implementation with:
 - Tauri v2 desktop shell
 - Svelte 5 frontend
 - Locally synthesized retro sound effects with no third-party audio requests
