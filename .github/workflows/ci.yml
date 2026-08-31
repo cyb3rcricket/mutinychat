@@ -21,6 +21,7 @@ jobs:
         run: bash scripts/run-dependency-audit.sh
 
   frontend:
+    if: github.event_name != 'schedule'
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
@@ -49,6 +50,7 @@ jobs:
           if-no-files-found: ignore
 
   backend:
+    if: github.event_name != 'schedule'
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
@@ -73,6 +75,7 @@ jobs:
           cat backend-tests.log
 
   rust:
+    if: github.event_name != 'schedule'
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
