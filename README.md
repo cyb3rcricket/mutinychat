@@ -178,7 +178,7 @@ GitHub Actions are pinned to full commit SHAs, Node.js, Python, Rust, and GnuPG 
 To verify a downloaded release artifact against GitHub's provenance record and then its checksum:
 
 ```bash
-gh attestation verify MutinyChat_0.1.0_windows_x86_64_portable.zip --repo madebytommi/mutinychat
+gh attestation verify MutinyChat_0.1.0_windows_x86_64_portable.zip --repo cyb3rcricket/mutinychat
 sha256sum --check SHA256SUMS.txt
 ```
 
@@ -245,7 +245,7 @@ These steps are required before calling a release fully verified. They are not m
 ## Security and privacy notes
 
 - No central chat server is used by design.
-- Retro sound effects are generated locally; MutinyChat does not load sound effects from Mixkit or another third-party service.
+- Retro sound effects are generated locally; MutinyChat does not load sound effects from Mixkit or another third-party sound service.
 - Removing third-party sound requests does not mean every application network flow is automatically protected by Tor.
 - MutinyChat binds Tor's control and SOCKS listeners to loopback, authenticates control access with SAFECOOKIE, and uses fresh SOCKS credentials with `IsolateSOCKSAuth` for each join. Those SOCKS credentials isolate streams; they do not prevent another process under the same operating-system account from using a discovered local SOCKS port.
 - An authenticated invitation detects a host-key mismatch, while the safety-code comparison detects full invitation substitution when users compare it through an independent trusted channel.
