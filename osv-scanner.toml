@@ -2,59 +2,6 @@
 # the dependency must be reassessed. Do not add an exception for a fixable
 # advisory merely to make CI pass.
 
-# Tauri 2 currently depends on the GTK3 Rust bindings on Linux. These RustSec
-# advisories report that the crates are unmaintained and provide no fixed
-# version. MutinyChat does not depend on their APIs directly.
-[[IgnoredVulns]]
-id = "RUSTSEC-2024-0413"
-ignoreUntil = 2026-10-20
-reason = "Linux-only transitive GTK3 crate required by Tauri 2; unmaintained advisory has no fixed version"
-
-[[IgnoredVulns]]
-id = "RUSTSEC-2024-0416"
-ignoreUntil = 2026-10-20
-reason = "Linux-only transitive GTK3 crate required by Tauri 2; unmaintained advisory has no fixed version"
-
-[[IgnoredVulns]]
-id = "RUSTSEC-2024-0412"
-ignoreUntil = 2026-10-20
-reason = "Linux-only transitive GTK3 crate required by Tauri 2; unmaintained advisory has no fixed version"
-
-[[IgnoredVulns]]
-id = "RUSTSEC-2024-0418"
-ignoreUntil = 2026-10-20
-reason = "Linux-only transitive GTK3 crate required by Tauri 2; unmaintained advisory has no fixed version"
-
-[[IgnoredVulns]]
-id = "RUSTSEC-2024-0411"
-ignoreUntil = 2026-10-20
-reason = "Linux-only transitive GTK3 crate required by Tauri 2; unmaintained advisory has no fixed version"
-
-[[IgnoredVulns]]
-id = "RUSTSEC-2024-0417"
-ignoreUntil = 2026-10-20
-reason = "Linux-only transitive GTK3 crate required by Tauri 2; unmaintained advisory has no fixed version"
-
-[[IgnoredVulns]]
-id = "RUSTSEC-2024-0414"
-ignoreUntil = 2026-10-20
-reason = "Linux-only transitive GTK3 crate required by Tauri 2; unmaintained advisory has no fixed version"
-
-[[IgnoredVulns]]
-id = "RUSTSEC-2024-0415"
-ignoreUntil = 2026-10-20
-reason = "Linux-only transitive GTK3 crate required by Tauri 2; unmaintained advisory has no fixed version"
-
-[[IgnoredVulns]]
-id = "RUSTSEC-2024-0420"
-ignoreUntil = 2026-10-20
-reason = "Linux-only transitive GTK3 crate required by Tauri 2; unmaintained advisory has no fixed version"
-
-[[IgnoredVulns]]
-id = "RUSTSEC-2024-0419"
-ignoreUntil = 2026-10-20
-reason = "Linux-only transitive GTK3 crate required by Tauri 2; unmaintained advisory has no fixed version"
-
 # The affected VariantStrIter methods are not called by MutinyChat. Tauri's
 # Linux GTK3 dependency requires glib 0.18, so 0.20 is not compatible.
 [[IgnoredVulns]]
